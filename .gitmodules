@@ -1,0 +1,3 @@
+[submodule "furry-engine"]
+	path = furry
+	url = https://github.com/viylouu/furry-engine

@@ -1,0 +1,97 @@
+[
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/data/api/gl/shader.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/data/api/gl/shader.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/data/api/gl/texture.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/data/api/gl/texture.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/data/shader.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/data/shader.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/data/texture.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/data/texture.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/input.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/input.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/matrix.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/matrix.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/platf/glfw/input.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/platf/glfw/input.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/platf/glfw/time.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/platf/glfw/time.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/render/gl/renderTarget.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/render/gl/renderTarget.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/renderTarget.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/renderTarget.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/time.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/time.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/platf/agnostic.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/platf/agnostic.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/platf/glfw/main.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/platf/glfw/main.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/render/agnostic.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/render/agnostic.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/render/draw.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/render/draw.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/render/gl/draw.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/render/gl/draw.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/render/gl/main.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/render/gl/main.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/render/gl/structs.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/render/gl/structs.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"src/main.c\"",
+        "file": "/media/storage/projects/hampter1re/src/main.c"
+    }
+]
