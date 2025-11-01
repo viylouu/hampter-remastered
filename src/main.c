@@ -14,9 +14,7 @@ int main(void) {
 
     FUR_timer* time = fur_makeTimer();
 
-    f32 x = 64;
-
-    FUR_renderTarget* targ = fur_renderTarget_constr(256, 256,);
+    FUR_renderTarget* targ = fur_renderTarget_constr(320,180,);
 
     while (!fur_platf_shouldWindowClose(platf)) {
         fur_platf_poll(platf);
@@ -26,12 +24,7 @@ int main(void) {
 render->defTarget = targ;
 
         fur_render_clear(render, .col = (v3){.2,.4,.3});
-        fur_render_rect(render, .pos = (v2){x,64}, .size = (v2){64,64}, .col = (v4){1,0,0,1});
-
-        if (fur_input_isKeyHeld(FUR_KEY_D))
-            x += 64 * time->delta;
-        if (fur_input_isKeyHeld(FUR_KEY_A))
-            x -= 64 * time->delta;
+        fur_render_rect(render, .pos = (v2){64,64}, .size = (v2){64,64}, .col = (v4){1,0,0,1});
 
         if (fur_input_isKeyHeld(FUR_KEY_T))
             fur_render_tex(render, .size = (v2){64,64}, .col = (v4){1,1,1,1});
