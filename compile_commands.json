@@ -91,6 +91,11 @@
     },
 	{
         "directory": "/media/storage/projects/hampter1re",
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/render/gl/loader.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/render/gl/loader.c"
+    },
+	{
+        "directory": "/media/storage/projects/hampter1re",
         "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"src/main.c\"",
         "file": "/media/storage/projects/hampter1re/src/main.c"
     }
