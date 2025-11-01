@@ -63,6 +63,7 @@ int main(void) {
     end();
 
     fur_renderTarget_destr(targ);
+    fur_destroyTimer(time);
 
     fur_render_destr(render);
     fur_platf_destr(platf);
