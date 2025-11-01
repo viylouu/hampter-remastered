@@ -6,10 +6,10 @@
 #include <core/time.h>
 #include <core/renderTarget.h>
 
-FUR_platfState* platf;
-FUR_renderState* render;
-FUR_timer* time;
-FUR_renderTarget* targ;
+FUR_platfState* platf = NULL;
+FUR_renderState* render = NULL;
+FUR_timer* time = NULL;
+FUR_renderTarget* targ = NULL;
 
 void init(void) {
     
