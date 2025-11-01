@@ -8,7 +8,7 @@
 
 FUR_platfState* platf = NULL;
 FUR_renderState* render = NULL;
-FUR_timer* time = NULL;
+FUR_timer* timer = NULL;
 FUR_renderTarget* targ = NULL;
 
 void init(void) {
@@ -43,7 +43,7 @@ int main(void) {
     render = fur_render_constr();
     fur_platf_setRender(platf, render);
 
-    time = fur_makeTimer();
+    timer = fur_makeTimer();
     targ = fur_renderTarget_constr(320,180,);
 
     init();
@@ -51,7 +51,7 @@ int main(void) {
     while (!fur_platf_shouldWindowClose(platf)) {
         fur_platf_poll(platf);
         fur_input_poll(platf);
-        fur_updateTimers(&time, 1);
+        fur_updateTimers(&timer, 1);
 
         update();
         draw();
@@ -63,7 +63,7 @@ int main(void) {
     end();
 
     fur_renderTarget_destr(targ);
-    fur_destroyTimer(time);
+    fur_destroyTimer(timer);
 
     fur_render_destr(render);
     fur_platf_destr(platf);
