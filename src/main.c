@@ -11,8 +11,17 @@ FUR_renderState* render = NULL;
 FUR_timer* timer = NULL;
 FUR_renderTarget* targ = NULL;
 
+struct textures {
+    FUR_texture* player;
+};
+struct textures tex;
+
 void init(void) {
-    
+    tex.player = fur_texture_load("data/sprites/player.png",);
+}
+
+void end(void) {
+    fur_texture_unload(tex.player,);
 }
 
 void update(void) {
@@ -24,18 +33,12 @@ void draw(void) {
 render->defTarget = targ;
 
     fur_render_clear(render, .col = (v3){.2,.4,.3});
-    fur_render_rect(render, .pos = (v2){64,64}, .size = (v2){64,64}, .col = (v4){1,0,0,1});
 
-    if (fur_input_isKeyHeld(FUR_KEY_T))
-        fur_render_tex(render, .size = (v2){64,64}, .col = (v4){1,1,1,1});
+    fur_render_tex(render, .texture = tex.player, .pos = (v2){64,64});
 
 render->defTarget = NULL;
 
     fur_render_renderTarget(render, .in_target = targ);
-}
-
-void end(void) {
-    
 }
 
 int main(void) {
