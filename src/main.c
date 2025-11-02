@@ -6,17 +6,73 @@
 #include <core/time.h>
 #include <core/renderTarget.h>
 
+
+f32 sign(f32 a) {
+    if (a >= 0)
+        return 1;
+    if (a <= 0)
+        return -1;
+    return 0;
+}
+
+
 FUR_platfState* platf = NULL;
 FUR_renderState* render = NULL;
 FUR_timer* timer = NULL;
 FUR_renderTarget* targ = NULL;
+
+typedef struct {
+    v2 spos;
+} Tile;
+
+Tile* map;
+u32 mapW, mapH;
+
+struct {
+    v2 pos;
+    v2 vel;
+
+    f32 deccel, accel;
+    f32 nudge;
+} player;
 
 struct textures {
     FUR_texture* player;
 };
 struct textures tex;
 
+void move_player(void) {
+    f32 dt = timer->delta * 4;
+    if (dt < 0) dt = 0;
+    if (dt >= 1/24.f) dt = 1/24.f;
+
+    f32 netHoriz = 0;
+
+    if (fur_input_isKeyHeld(FUR_KEY_D))
+        netHoriz += 1;
+    if (fur_input_isKeyHeld(FUR_KEY_A))
+        netHoriz -= 1;
+
+    if (netHoriz == 0)
+        player.vel.x += -sign(player.vel.x) * player.deccel * dt;
+    else {
+        player.vel.x += netHoriz * player.accel * dt;
+
+        if (fur_input_isKeyPressed(FUR_KEY_LSHIFT))
+            player.vel.x = netHoriz * (fabs(player.vel.x) + player.nudge);
+    }
+
+    player.pos.x += player.vel.x * dt;
+}
+
 void init(void) {
+    player.pos = (v2){0,0};
+    player.vel = (v2){0,0};
+    
+    player.deccel = 8;
+    player.accel = 8;
+    player.nudge = 16;
+
     tex.player = fur_texture_load("data/sprites/player.png",);
 }
 
@@ -25,7 +81,7 @@ void end(void) {
 }
 
 void update(void) {
-    
+    move_player();
 }
 
 void draw(void) {
@@ -34,7 +90,7 @@ render->defTarget = targ;
 
     fur_render_clear(render, .col = (v3){.2,.4,.3});
 
-    fur_render_tex(render, .texture = tex.player, .pos = (v2){64,64}, .size = (v2){24,24}, .sample = (v4){0,0,24,24});
+    fur_render_tex(render, .texture = tex.player, .pos = player.pos, .size = (v2){24,24}, .sample = (v4){0,0,24,24});
 
 render->defTarget = NULL;
 

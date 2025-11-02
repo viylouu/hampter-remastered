@@ -31,13 +31,13 @@
     },
 	{
         "directory": "/media/storage/projects/hampter1re",
-        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/platf/glfw/input.c\"",
-        "file": "/media/storage/projects/hampter1re/furry/core/platf/glfw/input.c"
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/platf/glfw/time.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/platf/glfw/time.c"
     },
 	{
         "directory": "/media/storage/projects/hampter1re",
-        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/platf/glfw/time.c\"",
-        "file": "/media/storage/projects/hampter1re/furry/core/platf/glfw/time.c"
+        "command": "gcc -std=c99 -pedantic -Wall -Wextra -Werror -Wno-initializer-overrides -Ifurry -I. -Ideps -Ifurry/deps -c \"furry/core/platf/glfw/input.c\"",
+        "file": "/media/storage/projects/hampter1re/furry/core/platf/glfw/input.c"
     },
 	{
         "directory": "/media/storage/projects/hampter1re",
