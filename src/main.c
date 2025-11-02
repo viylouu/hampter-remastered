@@ -34,7 +34,7 @@ render->defTarget = targ;
 
     fur_render_clear(render, .col = (v3){.2,.4,.3});
 
-    fur_render_tex(render, .texture = tex.player, .pos = (v2){64,64});
+    fur_render_tex(render, .texture = tex.player, .pos = (v2){64,64}, .size = (v2){24,24}, .sample = (v4){0,0,24,24});
 
 render->defTarget = NULL;
 
