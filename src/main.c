@@ -156,7 +156,7 @@ render->defTarget = targ;
 
 render->defTarget = NULL;
 
-    fur_render_renderTarget(render, .in_target = targ);
+    fur_render_renderTarget(render, .in_target = targ, .size = (v2){render->width + render->width/320.f, render->height + render->height/180.f});
 }
 
 int main(void) {
@@ -165,7 +165,7 @@ int main(void) {
     fur_platf_setRender(platf, render);
 
     timer = fur_makeTimer();
-    targ = fur_renderTarget_constr(320,180,);
+    targ = fur_renderTarget_constr(321,181,);
 
     init();
 
