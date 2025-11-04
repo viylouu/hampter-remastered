@@ -38,6 +38,10 @@ struct {
 
 struct textures {
     FUR_texture* player;
+
+    struct {
+        FUR_texture* lab;
+    } tiles;
 };
 struct textures tex;
 
@@ -74,6 +78,7 @@ void init(void) {
     player.nudge = 16;
 
     tex.player = fur_texture_load("data/sprites/player.png",);
+    tex.tiles.lab = fur_texture_load("data/sprites/lab tiles.png",);
 }
 
 void end(void) {
@@ -89,6 +94,10 @@ void draw(void) {
 render->defTarget = targ;
 
     fur_render_clear(render, .col = (v3){.2,.4,.3});
+
+    for(s32 x = 0; x < 320/16 +1; ++x)
+        for (s32 y = 0; y < 180/16 +1; ++y)
+            fur_render_tex(render, .texture = tex.tiles.lab, .pos = (v2){x*16,y*16}, .size = (v2){16,16}, .sample = (v4){0,48,16,16});
 
     fur_render_tex(render, .texture = tex.player, .pos = player.pos, .size = (v2){24,24}, .sample = (v4){0,0,24,24});
 
